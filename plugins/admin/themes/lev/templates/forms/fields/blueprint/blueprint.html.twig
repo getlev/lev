@@ -1,0 +1,12 @@
+{% extends "forms/field.html.twig" %}
+
+{% block field %}
+<input
+    data-lev-field="hidden"
+    data-lev-disabled="false"
+    type="hidden"
+    class="input"
+    {% if field.disabled or isDisabledToggleable %}disabled="disabled"{% endif %}
+    name="{{ (scope ~ field.name)|fieldName }}"
+    value="{{ blueprints.name }}" />
+{% endblock %}

@@ -1,0 +1,7 @@
+.search-input, [data-lev-field="array"] input, [data-lev-field="array"] textarea {
+  @extend .form-input;
+}
+
+.button {
+  @extend .btn;
+}

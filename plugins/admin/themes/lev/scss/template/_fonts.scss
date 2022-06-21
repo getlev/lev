@@ -1,0 +1,40 @@
+// RocketTheme Apps Support
+@include font-face('rockettheme-apps', '../fonts/rockettheme-apps/rockettheme-apps');
+
+i.fa-lev, i.fa-lev-spaceman, i.fa-lev-text, i.fa-lev-full,
+i.fa-lev-logo, i.fa-lev-symbol, i.fa-lev-logo-both, i.fa-lev-both,
+i.fa-gantry, i.fa-gantry-logo, i.fa-gantry-symbol, i.fa-gantry-logo-both, i.fa-gantry-both {
+    font-family: 'rockettheme-apps';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Lev
+.fa-lev-logo:before, .fa-lev-text:before {
+    content: "\61";
+}
+.fa-lev-symbol:before, .fa-lev:before, .fa-lev-spaceman:before {
+    content: "\62";
+}
+.fa-lev-logo-both:before, .fa-lev-both:before, .fa-lev-full:before {
+    content: "\66";
+}
+
+// Gantry
+.fa-gantry-logo:before {
+    content: "\64";
+}
+.fa-gantry:before, .fa-gantry-symbol:before {
+    content: "\63";
+}
+.fa-gantry-logo-both:before, .fa-gantry-both:before {
+    content: "\65";
+}

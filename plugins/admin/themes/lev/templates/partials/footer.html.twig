@@ -1,0 +1,5 @@
+{% if custom_admin_footer %}
+    {{ custom_admin_footer|raw }}
+{% else %}
+    <a href="https://getgrav.org" target="_blank" rel="noopener noreferrer">Lev</a> v<span class="lev-version">{{ constant('LEV_GVERSION') }}</span> - Admin v{{ admin_version }} - {{ "PLUGIN_ADMIN.WAS_MADE_WITH"|t|lower }} <i class="fa fa-heart-o pulse"></i> {{ "PLUGIN_ADMIN.BY"|t|lower }} <a href="https://getlev.com" target="_blank" rel="noopener noreferrer">Levitation</a>.
+{% endif %}

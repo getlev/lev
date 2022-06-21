@@ -1,0 +1,17 @@
+# Grav & Lev crushe without dirs: assets, user/accounts
+assets/**
+!assets/.gitkeep
+user/accounts/**
+!user/accounts/.gitkeep
+
+# Ignore dirs
+backup
+cache
+logs
+user/data
+
+# Ignore files
+user/config/media.yaml
+user/config/security.yaml
+user/config/system.yaml
+user/config/versions.yaml

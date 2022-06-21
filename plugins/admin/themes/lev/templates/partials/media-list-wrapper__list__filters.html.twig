@@ -1,0 +1,28 @@
+<div>
+    <div class="filter-wrapper filter-type">
+        <select class="filter js__filter" data-name="type" data-lev-selectize>
+            <option value="*" {% if not lev.uri.param('type') %}selected{% endif %}>All Files</option>
+            <option value="images" {% if lev.uri.param('type') == 'images' %}selected{% endif %}>Images</option>
+            <option value="videos"{% if lev.uri.param('type') == 'videos' %}selected{% endif %}>Videos</option>
+            <option value="audios"{% if lev.uri.param('type') == 'audios' %}selected{% endif %}>Audio</option>
+            <option value="files"{% if lev.uri.param('type') == 'files' %}selected{% endif %}>Files</option>
+        </select>
+    </div>
+
+    <div class="filter-wrapper filter-date">
+        <select class="filter js__filter" data-name="date" data-lev-selectize>
+            <option value="*">All Dates</option>
+            {% set theDate = date() %}
+            {% for year, months in admin.filesDates %}
+                <optgroup label="{{year}}">
+                    {% for month, number in months %}
+                        <option value="{{year}}-{{month}}" {% if lev.uri.param('date') == year~'-'~month %}selected{% endif %}>
+                            {{theDate.setDate(theDate.format('Y'), month, theDate.format('d'))|date('M')}}
+                            ({{number}})</option>
+                    {% endfor %}
+                </optgroup>
+            {% endfor %}
+
+        </select>
+    </div>
+</div>

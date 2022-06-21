@@ -1,0 +1,14 @@
+{% set status_mapping = {'info':'green', 'error': 'red', 'warning': 'yellow'} %}
+
+{% if lev.messages.all %}
+    <div id="messages">
+        {% for message in lev.messages.fetch %}
+
+            {% set scope = message.scope|e %}
+            {% set color = status_mapping[scope] %}
+
+            <div class="notices {{ scope }} {{ color }}"><p>{{ message.message|raw }}</p></div>
+
+        {% endfor %}
+    </div>
+{% endif %}

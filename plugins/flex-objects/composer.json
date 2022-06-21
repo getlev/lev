@@ -1,0 +1,32 @@
+{
+  "name": "getgrav/grav-plugin-flex-objects",
+  "type": "lev-plugin",
+  "description": "Flex Objects plugin for Lev CMS",
+  "keywords": ["flex-objects"],
+  "homepage": "https://github.com/trilbymedia/lev-plugin-flex-objects",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Team Lev",
+      "email": "devs@getgrav.org",
+      "homepage": "http://getgrav.org",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.3.6 || ^8.0",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lev\\Plugin\\FlexObjects\\": "classes/"
+    },
+    "classmap":  ["flex-objects.php"]
+  },
+  "config": {
+    "platform": {
+      "php": "7.3.6"
+    }
+  }
+}
